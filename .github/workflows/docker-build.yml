@@ -20,11 +20,11 @@ jobs:
       uses: docker/login-action@v3
       with:
         registry: ghcr.io
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+        username: \${{ github.actor }}
+        password: \${{ secrets.GITHUB_TOKEN }}
 
     - name: Build image
-      run: docker build -t ghcr.io/${{ github.repository_owner }}/fastapi-ci:latest .
+      run: docker build -t ghcr.io/devenq/fastapi-ci:latest .
 
     - name: Push image
-      run: docker push ghcr.io/${{ github.repository_owner }}/fastapi-ci:latest
+      run: docker push ghcr.io/devenq/fastapi-ci:latest
