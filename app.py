@@ -4,4 +4,4 @@ app = FastAPI()
 
 @app.get("/")
 def root():
-    return {"message": "CI/CD is working 🚀"}
+    return {"message": "New build is live ✅"}
